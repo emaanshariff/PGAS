@@ -33,7 +33,7 @@ blue = [0, 0, 255]
 yellow = [255, 255, 0]
 black = [0, 0, 0]
 
-
+#adds a random number to color_list to display a color
 def add_color_list(list):
     list.append(random.randint(1, 4))
 
