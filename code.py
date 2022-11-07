@@ -176,7 +176,13 @@ def reset():
     color_list = []
     game_start = False
 
-
+"""
+Function name: user_input
+Description: tests sensor user input and assigns a number associated with a certain color that will be tested against color_list using the compare_lists() function
+and uses either the wrong() or correct() function to display if the user got the sequence right
+Parameters: delay - time delayed between neopixel lights (floating point)
+Return value: none
+"""   
 def user_input(delay=0.1):
     global count
     for index in range(len(color_list)):
@@ -232,7 +238,7 @@ def user_input(delay=0.1):
             wrong()
             reset()
 
-
+#tests if user presses start button. If button_a is true, it starts game by putting previous functions in order
 while True:
     if not game_start:
         if button_a.value:
