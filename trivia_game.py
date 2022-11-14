@@ -16,8 +16,10 @@ def display_game(list):
     print("{B}. {choice}".format(B="B", choice=list[i+2]))
     print("{C}. {choice}".format(C="C", choice=list[i+3]))
     print("{D}. {choice}".format(D="D", choice=list[i+4]))
-    response = input(enter_answer)
-    if response.lower() == list[i+5]:
+    user_input = input(enter_answer)
+    while not user_input.lower() in 'abcd' and len(user_input) != 1:
+      user_input = input(enter_answer)
+    if user_input.lower() == list[i+5]:
       right += 1
     else:
       wrong += 1
